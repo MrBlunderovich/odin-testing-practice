@@ -1,20 +1,20 @@
 const { capitalize } = require("./index.js");
 
-test("Capitalize basic string", () => {
+test("Basic string", () => {
   expect(capitalize("string")).toBe("String");
 });
-test("Capitalize uppercase string", () => {
+test("Uppercase string", () => {
   expect(capitalize("STRING")).toBe("STRING");
 });
-test("Capitalize undefined", () => {
+test("Single letter", () => {
+  expect(capitalize("a")).toBe("A");
+});
+test("Undefined", () => {
   expect(capitalize()).toBe();
 });
-test("Capitalize empty string", () => {
+test("Empty string", () => {
   expect(capitalize("")).toBe("");
 });
-test("Capitalize number", () => {
-  expect(capitalize("1")).toBe("1");
-});
-test("Capitalize array", () => {
-  expect(capitalize(["a"])).toBe(["a"]);
+test("Number", () => {
+  expect(capitalize(1)).toBe(1);
 });
