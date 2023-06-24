@@ -87,3 +87,5 @@ export function caesarCipher(inputString = undefined, key = 1) {
   }
   return result;
 }
+
+export function analyzeArray(array) {}
