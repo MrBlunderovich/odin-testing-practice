@@ -31,3 +31,11 @@ test("Key of 0", () => {
 test("Big key", () => {
   expect(caesarCipher("abc", 26)).toBe("abc");
 });
+
+test("Negative key", () => {
+  expect(caesarCipher("abc", -27)).toBe("zab");
+});
+
+test("Cipher-decipher", () => {
+  expect(caesarCipher(caesarCipher("akz", 15), -15)).toBe("akz");
+});
