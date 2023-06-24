@@ -88,4 +88,15 @@ export function caesarCipher(inputString = undefined, key = 1) {
   return result;
 }
 
-export function analyzeArray(array) {}
+export function analyzeArray(array) {
+  const length = array.length;
+  const average = array.reduce((acc, item) => acc + item) / length;
+  const min = array.reduce((acc, item) => (acc > item ? item : acc));
+  const max = array.reduce((acc, item) => (acc < item ? item : acc));
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
+}
